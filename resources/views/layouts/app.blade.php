@@ -15,18 +15,30 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
-<body>
-    <div id="app">
+    <style>
+        h4 { font-family: 'Poppins'; font-size: 12px}
+    </style>
+    <nav class="navbar bg-white">
 
-        <main class="py-4 bg-white">
-            @yield('content')
-        </main>
-    </div>
-</body>
+    </nav>
+
+    <body class="bg-white">
+        <div id="app">
+
+            <main class="py-4 bg-white">
+                @yield('content')
+            </main>
+        </div>
+    </body>
+
+    <footer class="row text-center mt-2">
+        <h4 class="text-muted">Made by Aliff Rosli</h4>
+    </footer>
 </html>
