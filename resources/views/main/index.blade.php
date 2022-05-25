@@ -54,7 +54,7 @@
             <h1> Tarikh September, Hari</h1>
         </div>
         <div class="row px-4 mt-3">
-           <a type="button" href="#" class="btn btn-block btn-dark poppins">Tekan untuk kehadiran <i class='bx bxs-direction-left'></i></a>
+           <a type="button" href="{{ route('attendance.index') }}" class="btn btn-block btn-dark poppins">Tekan untuk kehadiran <i class='bx bxs-direction-left'></i></a>
         </div>
     </div>
 </div>
