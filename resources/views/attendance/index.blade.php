@@ -34,9 +34,17 @@
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Emel Wakil">
                 <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Emel Wakil</label>
             </div>
-            
             <div class="row px-4 mt-3">
-            <button type="submit" class="btn btn-block btn-dark poppins">Hantar kehadiran <i class='bx bx-check'></i></button>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul style="font-size: 10px">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <button type="submit" class="btn btn-block btn-dark poppins">Hantar kehadiran <i class='bx bx-check'></i></button>
             </div>
         </form>
     </div>

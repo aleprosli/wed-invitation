@@ -13,6 +13,9 @@
 <div class="container bg-white">
     <div class="row justify-content-center">
         <div class="col-md-12 text-center px-2">
+            @if(session('success'))
+                <div class="alert alert-success">{{session('success')}}</div>
+            @endif
             <i class='bx bx-male-female'></i>
             <h6>Undangan Majlis Pertunangan</h6>
             
