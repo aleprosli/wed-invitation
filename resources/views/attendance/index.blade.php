@@ -44,8 +44,15 @@
                         </ul>
                     </div>
                 @endif
+                
+            </div>
+            <div class="col-md-12 text-center px-2">
+                <a type="button" href="{{ route('main.index') }}" class="btn btn-block btn-warning poppins">Kembali <i class='bx bx-arrow-back'></i></a>
                 <button type="submit" class="btn btn-block btn-dark poppins">Hantar kehadiran <i class='bx bx-check'></i></button>
             </div>
+             <div class="col-md-12 text-center mt-2">
+                 <a type="button" href="{{ route('gift.index') }}" class="btn btn-block btn-success poppins">Hantar Hadiah <i class='bx bxs-gift'></i></a>
+              </div>
         </form>
     </div>
 </div>

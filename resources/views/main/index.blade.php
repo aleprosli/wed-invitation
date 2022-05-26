@@ -56,9 +56,12 @@
         <div class="row text-center mt-2">
             <h1> Tarikh September, Hari</h1>
         </div>
-        <div class="row px-4 mt-3">
+        <div class="col-md-12 text-center px-2">
            <a type="button" href="{{ route('attendance.index') }}" class="btn btn-block btn-dark poppins">Isi untuk kehadiran <i class='bx bxs-direction-left'></i></a>
         </div>
+        <div class="col-md-12 text-center mt-2">
+            <a type="button" href="{{ route('gift.index') }}" class="btn btn-block btn-success poppins">Hantar Hadiah <i class='bx bxs-gift'></i></a>
+         </div>
     </div>
 </div>
 @endsection
