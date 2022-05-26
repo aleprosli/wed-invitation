@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attendance;
 use Illuminate\Http\Request;
 
 class AttendanceController extends Controller
@@ -14,7 +15,8 @@ class AttendanceController extends Controller
     public function store(Request $request)
     {
         $attendance =  Attendance::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'email' => $request->email
         ]);
 
         return to_route('main.index');
