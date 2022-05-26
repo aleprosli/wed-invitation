@@ -10,4 +10,13 @@ class AttendanceController extends Controller
     {
         return view('attendance.index');
     }
+
+    public function store(Request $request)
+    {
+        $attendance =  Attendance::create([
+            'name' => $request->name
+        ]);
+
+        return to_route('main.index');
+    }
 }
