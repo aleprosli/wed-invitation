@@ -26,6 +26,6 @@ class AttendanceController extends Controller
 
         SendAttendanceJob::dispatch($attendance);
         
-        return to_route('main.index');
+        return to_route('gift.index');
     }
 }
