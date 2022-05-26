@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('main.index');
 Route::get('/kehadiran', [App\Http\Controllers\AttendanceController::class, 'index'])->name('attendance.index');
+Route::post('/kehadiran/simpan', [App\Http\Controllers\AttendanceController::class, 'store'])->name('attendance.store');
 
 Auth::routes();
 
