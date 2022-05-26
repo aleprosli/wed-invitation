@@ -24,14 +24,21 @@
             <h6> Diminta jasa baik tuan/puan untuk isi maklumat berikut untuk memudahkan majlis kami nanti. </h6>
         </div>
 
-        <div class="form-floating my-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nama Wakil">
-            <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nama Wakil</label>
-        </div>
-        
-        <div class="row px-4 mt-3">
-           <a type="button" href="#" class="btn btn-block btn-dark poppins">Tekan untuk kehadiran <i class='bx bx-check'></i></a>
-        </div>
+        <form method="POST" action="{{ route('attendance.store') }}">
+        @csrf
+            <div class="form-floating my-3">
+                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nama Wakil">
+                <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nama Wakil</label>
+            </div>
+            <div class="form-floating my-3">
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Emel Wakil">
+                <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Emel Wakil</label>
+            </div>
+            
+            <div class="row px-4 mt-3">
+            <button type="submit" class="btn btn-block btn-dark poppins">Hantar kehadiran <i class='bx bx-check'></i></button>
+            </div>
+        </form>
     </div>
 </div>
 @endsection
