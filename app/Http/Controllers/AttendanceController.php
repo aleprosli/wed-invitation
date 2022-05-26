@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Attendance;
 use Illuminate\Http\Request;
+use App\Jobs\SendAttendanceJob;
 
 class AttendanceController extends Controller
 {
@@ -18,7 +19,9 @@ class AttendanceController extends Controller
             'name' => $request->name,
             'email' => $request->email
         ]);
-
+        
+        SendAttendanceJob::dispatch($attendance);
+        
         return to_route('main.index');
     }
 }
