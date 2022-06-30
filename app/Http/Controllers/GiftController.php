@@ -15,9 +15,9 @@ class GiftController extends Controller
 
     public function store(Request $request,Gift $gift)
     {
-        $toyyibpay_secret_key = config('services.devtoyyibpay.secret');
+        $toyyibpay_secret_key = config('services.toyyibpay.secret');
 
-        $url = config('services.devtoyyibpay.url').'index.php/api/createBill';
+        $url = config('services.toyyibpay.url').'index.php/api/createBill';
 
         $priceAmount = $request->price * 100;
 
@@ -30,7 +30,7 @@ class GiftController extends Controller
 
         $body =[
             'userSecretKey' => $toyyibpay_secret_key,
-            'categoryCode' => config('services.devtoyyibpay.categoryCode'),
+            'categoryCode' => config('services.toyyibpay.categoryCode'),
             'billName' => 'Majlis Tunang',
             'billDescription' => 'Hadiah bernilai : RM '.$request->price,
             'billAmount' => $priceAmount,
@@ -42,7 +42,7 @@ class GiftController extends Controller
             'billTo'=> $request->name,
             'billEmail'=> $request->email,
             'billPriceSetting'=>1,
-            'billContentEmail'=>'Terima Kasih untuk permberiah hadiah bernilai : RM '.$request->price,
+            'billContentEmail'=>'Terima Kasih untuk pemberian hadiah bernilai : RM '.$request->price,
             'billPaymentChannel'=>2,
             'billChargeToCustomer'=>''
         ];
@@ -55,7 +55,7 @@ class GiftController extends Controller
             'toyyibpay_bill_code' => $BillCode,
         ]);
 
-        return redirect(config('services.devtoyyibpay.url').$BillCode);
+        return redirect(config('services.toyyibpay.url').$BillCode);
     }
 
     public function returnURL(Request $request)
