@@ -17,6 +17,9 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('ma
 Route::get('/kehadiran', [App\Http\Controllers\AttendanceController::class, 'index'])->name('attendance.index');
 Route::post('/kehadiran/simpan', [App\Http\Controllers\AttendanceController::class, 'store'])->name('attendance.store');
 Route::get('/hadiah', [App\Http\Controllers\GiftController::class, 'index'])->name('gift.index');
+Route::post('/hantar/hadiah', [App\Http\Controllers\GiftController::class, 'store'])->name('gift.store');
+Route::get('/returnURL', [App\Http\Controllers\GiftController::class, 'returnURL'])->name('gift.returnURL');
+Route::get('/callbackURL', [App\Http\Controllers\GiftController::class, 'callbackURL'])->name('gift.callbackURL');
 
 Auth::routes();
 
