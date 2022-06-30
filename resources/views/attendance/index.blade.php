@@ -18,7 +18,7 @@
             
         </div>
         <div class="row text-muted text-center mt-2">
-            <h6> Lokasi : ..... </h6>
+            <h6> Lokasi : Belakang Balai Polis Gunong, Bachok </h6>
         </div>
         <div class="row text-muted text-center mt-2">
             <h6> Diminta jasa baik tuan/puan untuk isi maklumat berikut untuk memudahkan majlis kami nanti. </h6>
@@ -26,11 +26,11 @@
 
         <form method="POST" action="{{ route('attendance.store') }}">
         @csrf
-            <div class="form-floating my-3">
+            <div class="form-floating mx-auto w-50 p-2">
                 <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nama Wakil">
                 <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nama Wakil</label>
             </div>
-            <div class="form-floating my-3">
+            <div class="form-floating mx-auto w-50 p-2">
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Emel Wakil">
                 <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Emel Wakil</label>
             </div>
