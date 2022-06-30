@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->nullable();
             $table->string('name');
-            $table->float('price', 8, 2);
+            $table->integer('price');
+            $table->boolean('payment_status')->default(false);
+            $table->string('toyyibpay_bill_code')->nullable();
             $table->string('phone_number');
             $table->string('email')->unique();
             $table->timestamps();
