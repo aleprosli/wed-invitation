@@ -54,7 +54,7 @@
             <h6> Pada Tarikh/Hari</h6>
         </div>
         <div class="row text-center mt-2">
-            <h1> Tarikh September, Hari</h1>
+            <h1> 17 September 2022, Sabtu</h1>
         </div>
         <div class="col-md-12 text-center px-2">
            <a type="button" href="{{ route('attendance.index') }}" class="btn btn-block btn-dark poppins">Isi untuk kehadiran <i class='bx bxs-direction-left'></i></a>
