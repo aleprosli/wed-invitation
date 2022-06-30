@@ -21,7 +21,7 @@ return new class extends Migration
             $table->boolean('payment_status')->default(false);
             $table->string('toyyibpay_bill_code')->nullable();
             $table->string('phone_number');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->timestamps();
         });
     }
