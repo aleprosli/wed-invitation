@@ -15,5 +15,7 @@ class Gift extends Model
         'price',
         'phone_number',
         'email',
+        'payment_status',
+        'toyyibpay_bill_code',
     ];
 }
