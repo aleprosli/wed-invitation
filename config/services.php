@@ -37,4 +37,10 @@ return [
         'categoryCode' => env('TOYYIBPAY_CATEGORY_CODE'),
     ],
 
+    'devtoyyibpay' => [
+        'url' => env('DEV_TOYYIBPAY_URL'),
+        'secret' => env('DEV_TOYYIBPAY_SECRET'),
+        'categoryCode' => env('DEV_TOYYIBPAY_CATEGORY_CODE'),
+    ],
+
 ];
