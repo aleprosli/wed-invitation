@@ -15,11 +15,23 @@
         <div class="col-md-12 text-center px-2">
             <i class='bx bxs-gift'></i>
             <h6>Hadiah</h6>
-            <form method="POST" action="{{ route('attendance.store') }}">
+            <form method="POST" action="{{ route('gift.store') }}">
                 @csrf
                     <div class="form-floating mx-auto w-50 p-2">
-                        <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nama Wakil">
-                        <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nilai Hadiah</label>
+                        <input type="text" name="name" class="form-control"  id="floatingInput" placeholder="Nama Singkatan">
+                        <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nama Singkatan Anda</label>
+                    </div>
+                    <div class="form-floating mx-auto w-50 p-2">
+                        <input type="number" name="price" class="form-control"  min="1" max="100" id="floatingInput" placeholder="Nilai Hadiah (RM)">
+                        <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nilai Hadiah (RM)</label>
+                    </div>
+                    <div class="form-floating mx-auto w-50 p-2">
+                        <input type="number" name="phone_number" class="form-control" id="floatingInput" placeholder="Nombor Telefon">
+                        <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Nombor Telefon Anda</label>
+                    </div>
+                    <div class="form-floating mx-auto w-50 p-2">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Emel">
+                        <label for="floatingInput" class="text-center px-4" style="font-size: 12px">Emel Anda</label>
                     </div>
                     <div class="row px-4 mt-3">
                         @if ($errors->any())
